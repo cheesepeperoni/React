@@ -1,0 +1,25 @@
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:10px;
+    
+}
+input{
+    width:300px;
+    height:30px;
+    border-color: lavender;
+}
+.create-button{
+    border:1px solid rgb(194, 182, 228);
+    background-color: rgb(194, 182, 228);
+    padding:10px;
+    border-radius: 0.3em;
+    margin-left:10px;
+    cursor: pointer;
+    font-size: 14px;
+    color:white;
+}
+.create-button:hover{
+    background-color: rgb(171, 160, 202);
+}

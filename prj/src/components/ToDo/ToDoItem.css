@@ -1,0 +1,11 @@
+.todo-item{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    cursor:pointer;
+    margin-top:10px;
+
+}
+.checked{
+     text-decoration: line-through;
+}

@@ -1,11 +1,18 @@
-import Add from "./components/Add/Add";
+import React,{Component} from "react";
+import Form from "./components/ToDo/Form";
+import ToDo from "./components/ToDo/ToDo";
+import ToDoItemList from "./components/ToDo/ToDoItemList";
 
-function App() {
-  return (
-    <div className="App">
-     <Add/>
-    </div>
-  );
+class App extends Component{
+  render(){
+    return (
+      <div className="App">
+      <ToDo form={<Form/>}>
+        <ToDoItemList></ToDoItemList>
+      </ToDo>
+      </div>
+    );
+  }
 }
 
 export default App;
