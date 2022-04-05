@@ -4,10 +4,10 @@ import './body.css'
 const Body = () => {
    
   const [id, setId] = useState(0);
-  const [todoValue, setTodoValue] = useState("");//1
+  const [todoValue, setTodoValue] = useState("");
   const [todoList, setTodoList] = useState([]);
 
-  const todoInput = (e) => { //1
+  const todoInput = (e) => { 
     setTodoValue(todoValue => e.target.value)
   }
 
@@ -19,16 +19,23 @@ const Body = () => {
   const submitTodo = () => {
       var todo = document.getElementsByClassName('box');
       todo.value = null;
+
+      if(todoValue !== ''){
       setTodoList(todoList =>[
         ...todoList,
         {
             id: id,
             value: todoValue,
+            checked:false
         }
+        
     ])
-    setId(id =>id+1);
-    setTodoValue("");
-   
+      setId(id =>id + 1);
+      setTodoValue("");
+      console.log(id);
+    }else{
+      alert("다시 입력해주세요");
+    }
   }
 
   const removeTodo = (id) => {
@@ -47,11 +54,10 @@ const Body = () => {
              <ul className='list'>
                    {todoList.map((a) => {
                        return(
-                        <div className="checkbox">
                        <li className='mapList' onClick={() =>{
                          removeTodo(a.id)
                        }}>
-                         {a.value}</li></div>
+                         {a.value}</li>
                        )
                    })}
                </ul>
