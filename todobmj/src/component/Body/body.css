@@ -2,4 +2,66 @@
     width:100%;
     height: 100vh;
     background-image: url('../../Image/moon.jpg');
+    position:relative;
 }
+.todoList{
+    position: absolute;
+    padding-top:10%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.boxContainer{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    height:50px;
+    width:50%;
+    outline: none;
+    opacity: 0.8;
+}
+.box:focus{
+    border-color:white;
+    box-shadow: 0 0 10px 0 white;
+}
+.button{
+    margin-left:30px;
+    cursor:pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius:0.2em;
+    font-weight: bold;
+}
+.button:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.listName{
+    color:white;
+    font-size: 100px;
+    font-family: 'Noto Serif KR', serif;
+    text-shadow: 4px 2px 2px rgb(134, 136, 150);
+    opacity: 0.9;
+   
+}
+.checkList{
+    color:white;
+    margin-top:30px;
+    font-size: 30px;
+    cursor:pointer;
+    align-items: center;
+    justify-content: center;
+}
+ul mapList{
+    text-align: center;
+    display: flex;
+}
+
+    
