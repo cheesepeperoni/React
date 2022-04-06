@@ -63,5 +63,11 @@ ul mapList{
     text-align: center;
     display: flex;
 }
-
-    
+.spanCheck{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.ch{
+    text-decoration: line-through;
+  }
