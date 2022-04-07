@@ -5,7 +5,7 @@ import '../Detail.css'
 
 const Detail = () => {
     const {id} = useParams();
-    const [movie, setMovie] = useState();
+    const [movie, setMovie] = useState([ ]);
 
     const getMovie = async() =>{
         const json = await(
