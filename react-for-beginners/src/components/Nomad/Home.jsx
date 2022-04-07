@@ -34,7 +34,7 @@ const MovieMain = () => {
           key={movie.id}
           id={movie.id}
           coverImg={movie.medium_cover_image}
-          title={movie.title}
+          title={movie.title_long}
           summary={movie.summary}
           genres={movie.genres}
           />

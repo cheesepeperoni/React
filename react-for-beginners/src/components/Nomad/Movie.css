@@ -1,0 +1,13 @@
+.container{
+    background-color:white;
+}
+.movie{
+    border-radius: 0.3em;
+    margin:50px;
+    padding:50px;
+    background-color: beige;
+   
+}
+.image{
+    position:relative;
+}
