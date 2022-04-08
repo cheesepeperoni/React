@@ -1,0 +1,11 @@
+.button{
+    display: flex;
+}
+.btn{
+    margin:2px;
+    padding:5px;
+    border-radius: 0.3em;
+    background-color: rgb(151, 151, 216);
+    font-size: 13px;
+    color:white;
+}

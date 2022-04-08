@@ -15,11 +15,13 @@ const Movie = ({id,coverImg,title,summary,genres}) => {
           </h2>
         <p>MOVIE SUMMARY : {summary.length>235 ? `${summary.slice(0.235)}...`: summary}</p>
             MOVIE JANRE 
+            <ul>
             {genres.map((g)=>(
                 <li key={g}>
                 {g}
                 </li>
                 ))}
+            </ul>
     </div>
   </div>
   )
