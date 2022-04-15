@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+.container,body,html{
+    height:100%;
+    background-color: rgb(253, 254, 255);
+}
+.loader{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.movies {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:120px;
+    
+}
+.movie{
+    width:47%;
+    margin-bottom: 50px;
+    background-color: white;
+    padding:30px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 0.5em;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie img{
+    position: relative;
+    top: -50px;
+    max-width: 160px;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie_data{
+    padding-left: 30px;
+    width:70%;
+}
+
+.movie_title{
+    font-size: 30px;
+    font-family: 'Noto Serif KR', serif;
+    color:rgb(77, 82, 85);
+}
+.movie_year{
+    font-family: 'Noto Serif KR', serif;
+    opacity: 0.6;
+}
+
+.movie_summary, .movie_genre{
+    color:rgb(149, 151, 153);
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 900;
+}
+.movie_genre{
+    list-style: none;
+    display: flex;
+    padding:10px 0px 10px 0px;
+    font-size: 20px;
+    
+}
+
+.movie_genre li{
+    margin-right:10px;
+    color:rgb(157, 162, 167);
+}
+.movie_summary{
+    font-size:18px;
+}

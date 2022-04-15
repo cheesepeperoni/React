@@ -1,10 +1,10 @@
-import Movie from './components/Movie'
+import Movies from './components/Movies'
 
 function App() {
 
   return (
     <div className="App">
-      <Movie/>
+      <Movies/>
     </div>
   )
 }
