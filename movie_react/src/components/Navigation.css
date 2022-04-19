@@ -1,0 +1,19 @@
+.nav{
+    margin:10px;
+    border-radius: 0.5em;
+    width:100px;
+    height: 80px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow:5px 5px 10px rgb(219, 215, 215);
+    position:absolute;
+    margin-top:5%;
+}
+.Home, .About{
+    padding-bottom: 10px;
+    text-decoration: none;
+    color:rgb(130, 130, 245);
+    font-weight: 700;
+}

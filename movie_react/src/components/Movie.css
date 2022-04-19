@@ -13,12 +13,18 @@
     font-family: 'Noto Serif KR', serif;
 }
 
-.movies {
+.movies{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding:120px;
+    padding-top:5%;
+    padding-bottom:5%;
     
+}
+.movies a{
+    display: contents;
+    text-decoration: none;
 }
 .movie{
     width:47%;
