@@ -1,0 +1,124 @@
+.container{
+    display: flex;
+    font-size:12px;
+    height:100vh;
+    width:100%;
+}
+.left,.right,.bottom{
+    border:1px solid black;
+}
+.left{
+    width:70%;
+    height:30vh;
+    display: flex;
+    justify-content: center;
+}
+.right{
+    margin-left:5%;
+    width:25%;
+    height:30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bottom{
+    position:absolute;
+    left:74.8%;
+    width:24.5%;
+    height:60vh;
+    top:35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* left */
+.leftContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:28px;
+    flex-wrap: wrap;
+    width:120px;
+}
+.leftBox{
+    border:1px solid black;
+    width:50px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+/* right */
+.rightContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width:150px;
+    
+}
+.rightBox{
+    border:1px solid black;
+    width:50px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px; 
+    cursor:pointer;
+}   
+    
+
+/* bottom */
+#bottomContainerUp,#bottomContainerDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:300px;
+
+}
+.bottomUp{
+    margin-bottom:50px;
+}
+.bottomBox{
+    border:1px solid black;
+    width:50px;
+    height:50px;
+    margin:12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+    cursor: pointer;
+}
+
+
+/* list */
+.list{
+    border:1px solid black;
+    width:120px;
+    height:350px;
+    position:absolute;
+    top:40%;
+    left:20%;
+}
+.items{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.itemTitle{
+    font-size: 20px;
+    margin-bottom:10px;
+}
+.item{
+    font-size: 18px;
+    margin-bottom:5px;
+    cursor: pointer;
+}
