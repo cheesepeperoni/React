@@ -23,7 +23,7 @@ const Test = () => {
     if(lcChild.innerText==""){
       lcChild.append(item)
     }else{
-      alert("Left Append Test")
+      lcChild.innerText=""
     }
   }
 
@@ -34,7 +34,7 @@ const Test = () => {
     if(r.innerText==""){
       r.append(item)
     }else{
-      alert("Right Append Test")
+      r.innerText=""
     }
   }
 
@@ -47,7 +47,7 @@ const Test = () => {
     if(buChild.innerText==""){
       buChild.append(item)
     }else{
-      alert("Up Append Test")
+      buChild.innerText=""
     }
   }
 
@@ -58,7 +58,7 @@ const Test = () => {
     if(bdChild.innerText==""){
       bdChild.append(item)
     }else{
-      alert("Down Append Test")
+      bdChild.innerText=""
     }
   }
 

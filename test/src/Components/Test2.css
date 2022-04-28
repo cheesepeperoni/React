@@ -19,6 +19,7 @@
     height:25vh;
     width:76%;
     margin-top:5%;
+    cursor: pointer;
 }
 
 .headerBox1{
@@ -52,7 +53,7 @@
     justify-content: center;
     align-items: center;
 }
-.headerBox2{
+#headerBox2{
     height:15vh;
     display: flex;
     justify-content: center;
@@ -69,18 +70,16 @@
     height:500px;
 }
 
-.leftBox1,.leftBox2{
+#leftBox1,#leftBox2{
     border-bottom: 1px solid black;
     width:100%;
-}
-.leftBox1,.leftBox2{
     height:200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.leftBox3{
+#leftBox3{
     height:100px;
     display: flex;
     flex-wrap: wrap;
@@ -111,7 +110,7 @@
     flex-wrap: wrap;
 
 }
-.rightBox2{
+#rightBox2{
     border-left: 1px solid black;
     width:80px;
     height:800px;
@@ -130,7 +129,7 @@
     justify-content: center;
     align-items: center;
 }
-.footerBox{
+#footerBox{
     border:1px solid black;
     width:48%;
     height: 30vh;
@@ -138,7 +137,35 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    cursor: pointer;
 }
+.list2{
+    border:1px solid black;
+    width:500px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    top:45%;
+    left:35%;
+}
+.items2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-
+}
+.item2{
+    font-size: 11px;
+    width:30px;
+    text-align: center;
+    cursor: pointer;
+    padding:5px;
+    background-color:rgb(227, 220, 241);
+    border:none;
+    border-radius: 0.3em;
+    color:rgb(56, 25, 114);
+    margin:3px;
+    
+}
 
