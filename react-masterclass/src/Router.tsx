@@ -12,7 +12,7 @@ const Routes = () => {
         </Route>
         <Route path="/">
              <Coins/>
-        </Route>   
+        </Route>
      </Switch>
    </BrowserRouter>
   )

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { Link, Route, Switch, useLocation, useParams, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components';
+import Chart from './Chart';
+import Price from './Price';
 
 interface coinIdParams {
 coinId:string;
@@ -92,6 +94,7 @@ const Overview= styled.div`
   justify-content: space-between;
   border-radius: 10px;
   background-color:rgba(0, 0, 0, 0.5);
+  color:white;
   padding:10px 20px;
 `;
 
@@ -99,6 +102,7 @@ const OverviewItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
   span:first-child{
     font-size:10px;
@@ -110,14 +114,42 @@ const OverviewItem = styled.div`
 
 const Description = styled.p`
   margin:20px 0px;
+  color:darkgrey;
 
 `;
+const Tabs = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 25px 0px;
+  gap: 10px;
+`;
+
+const Tab = styled.span<{isActive:boolean}>`
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 7px 0px;
+  display: block;
+  color:${(props)=>
+   props.isActive? "white":"#9c9696"};
+  a{
+    display: block;
+  }
+
+`;
+
 const Coin = () => {
-  const [loading, setLoading] = useState(true);
   const { coinId } = useParams<coinIdParams>();
   const { state } = useLocation<RouteState>();
+  const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState<InfoData>();
   const [priceInfo, setPriceInfo] = useState<PriceData>();
+  const priceMatch = useRouteMatch("/:coinId/price");
+  const chartMatch = useRouteMatch("/:coinId/chart");
+
   useEffect(()=>{
     (async ()=>{
       const infoData = await (await fetch(`https://api.coinpaprika.com/v1/coins/${coinId}`)).json();
@@ -164,6 +196,29 @@ const Coin = () => {
           <span>{priceInfo?.max_supply}</span>
         </OverviewItem>
       </Overview>
+
+      <Tabs>
+        <Tab isActive={chartMatch!==null}>
+          <Link to={`/${coinId}/chart`}>
+            Chart
+          </Link>
+        </Tab>
+        <Tab isActive={priceMatch!==null}>
+          <Link to={`/${coinId}/price`}>
+            Price
+          </Link>
+        </Tab>
+      </Tabs>
+
+      <Switch>
+        <Route path={`/${coinId}/price`}>
+          <Price/>
+        </Route>
+        <Route path={`/${coinId}/chart`}>
+          <Chart/>
+        </Route>
+      </Switch>
+
       </>
     }
   </Container>

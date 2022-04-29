@@ -34,6 +34,15 @@ const Items = styled.ul`
     display: flex;
     align-items: center;
 `;
+const Search = styled.form`
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  svg {
+    height: 25px;
+  }
+`;
 
 const Item = styled.li`
     margin-right: 20px;
@@ -60,6 +69,10 @@ const Circle = styled(motion.span)`
     background-color:${(props) => props.theme.red};
 `;
 
+const Input = styled(motion.input)`
+
+`;
+
 const logoVariants = {
     norma:{
         fillOpacity:1,
@@ -76,7 +89,7 @@ const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const homeMatch = useRouteMatch("/");
   const tvMatch = useRouteMatch("/tv");
-  console.log(homeMatch,tvMatch);
+  const openSearch = () => setSearchOpen(true);
   return (
    <Nav>
     <Col>
@@ -106,9 +119,22 @@ const Header = () => {
             </Item>
         </Items>
     </Col>
-    <Col>
-        <button>Search</button>
-    </Col>
+      <Col>
+        <Search onClick={openSearch}>
+           <svg 
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns='http://www.w3.org/2000/svg'
+           >
+           <path
+              fillRule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              clipRule="evenodd"
+            ></path>
+            </svg>
+            <Input initial={{scaleX:0.1}} placeholder='Search for movie!'/>
+        </Search>    
+      </Col>
    </Nav>
   )
 }
